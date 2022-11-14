@@ -112,12 +112,25 @@ namespace double_linked_list
             current.next.prev = previous;
             return true;
         }
-        public bool listEmpety()
+        public bool ListEmpety()
         {
             if (START == null)
                 return true;
-            false
+            false;
                 return false;
+        }
+
+        public void ascending()
+        {
+            if (ListEmpety())
+                Console.WriteLine("\nList is empty");
+            else
+            {
+                Console.WriteLine("\nRecord in the ascending order of" + "roll number are:\n");
+                node currentNode;
+                for (currentNode = START; currentNode != null; currentNode = currentNode.next)
+                    Console.Write(currentNode.noMhs + "" + currentNode.name + "\n");
+            }
         }
     }
 }
