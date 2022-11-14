@@ -15,8 +15,13 @@ namespace double_linked_list
         //point to the precceeding node
         public node prev;
     }
-    internal class program
-    {
 
+    class DoubleLinkedList
+    {
+        node START;
+
+        //constructor
+        
     }
+    
 }
