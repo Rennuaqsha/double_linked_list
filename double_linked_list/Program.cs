@@ -112,6 +112,12 @@ namespace double_linked_list
             current.next.prev = previous;
             return true;
         }
-
+        public bool listEmpety()
+        {
+            if (START == null)
+                return true;
+            false
+                return false;
+        }
     }
 }
