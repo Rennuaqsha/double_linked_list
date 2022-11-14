@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Xml.Linq;
 
 namespace double_linked_list
 {
@@ -203,8 +204,42 @@ namespace double_linked_list
                                 obj.descending();
                             }
                             break;
+                        case '5':
+                            {
+                                if (obj.ListEmpety() == true)
+                                {
+                                    Console.WriteLine("\nList id Empty");
+                                    break;
+                                }
+                                node prev, curr;
+                                prev = curr = null;
+                                Console.Write("\nEnter the rol number of the student whoses rocord you want to search:");
+                                int num = Convert.ToInt32(Console.ReadLine());
+                                if (obj.search(num, ref prev, ref curr) == false)
+                                    Console.WriteLine("\nRecord not found");
+                                else
+                                {
+                                    Console.WriteLine("\nRecord found");
+                                    Console.WriteLine("\nRoll number" + curr.noMhs);
+                                    Console.WriteLine("\nName:" + curr.name);
+                                }
+
+                            }
+                            break;
+                        case '6':
+                            return;
+                        default:
+                            {
+                                Console.WriteLine("\nInvalid option");
+                            }
+                            break;
                     }
-               } 
+               }
+                catch (Exception e)
+                {
+                    Console.WriteLine("Check for the values entered");
+                }
+
             }
         }
     }
