@@ -21,7 +21,10 @@ namespace double_linked_list
         node START;
 
         //constructor
-        
+        public DoubleLinkedList()
+        {
+            START = null;
+        }
     }
     
 }
