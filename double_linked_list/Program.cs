@@ -69,7 +69,7 @@ namespace double_linked_list
              * * between wich the new node is to be insarted.*/
             newNode.next = current;
             newNode.prev = Previous;
-            
+
             //if the node is to be insarted at the end of the list 
             if (current == null)
             {
@@ -80,6 +80,14 @@ namespace double_linked_list
             current.prev = newNode;
             Previous.next = newNode;
         }
+        public bool search(int rollNo, ref node previous, ref node current)
+        {
+            for(previous = current = START; current != null &&
+                rollNo != current.noMhs; previous = current,
+                current = current.next) { }
+            return (current != null);
+        }
         
+
     }
 }
