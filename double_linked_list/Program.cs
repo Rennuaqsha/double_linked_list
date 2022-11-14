@@ -68,8 +68,18 @@ namespace double_linked_list
              * * current will point to those nodes
              * * between wich the new node is to be insarted.*/
             newNode.next = current;
-            newNode.prev = Previous
+            newNode.prev = Previous;
+            
+            //if the node is to be insarted at the end of the list 
+            if (current == null)
+            {
+                newNode.next = null;
+                Previous.next = newNode;
+                return ;
+            }
+            current.prev = newNode;
+            Previous.next = newNode;
         }
-
+        
     }
 }
